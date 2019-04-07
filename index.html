@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Навигатор по Буджаку</title>
+    <style>
+      #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #right-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+
+      #right-panel i {
+        font-size: 12px;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        height: 100%;
+        float: left;
+        width: 70%;
+        height: 100%;
+      }
+
+      #right-panel {
+        margin: 20px;
+        border-width: 2px;
+        width: 20%;
+        height: 400px;
+        float: left;
+        text-align: left;
+        padding-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="right-panel">
+    <b>Начало:</b>
+    <select id="start">
+      <option value="Arzys, Odessa Oblast">Арциз</option>
+      <option value="Belgorod-Dnestrovskij, Odessa Oblast">Белгород-Днестровский</option>
+      <option value="Bolgrad, Odessa Oblast">Болград</option>
+      <option value="Izmail, Odessa Oblast">Измаил</option>
+      <option value="Kilia, Odessa Oblast">Килия</option>
+      <option value="Odessa, Odessa Oblast">Одесса</option>
+      <option value="Reni, Odessa Oblast">Рени</option>
+      <option value="Sarata, Odessa Oblast">Сарата</option>
+      <option value="Tarutyne, Odessa Oblast">Тарутино</option>
+      <option value="Tatarbunary, Odessa Oblast">Татарбунары</option>
+    </select>
+    <br>
+    <b>Путевые точки:</b> <br>
+    <i>(Ctrl+Click для множественного выбора)</i> <br>
+    <select multiple id="waypoints">
+      <option value="Arzys, Odessa Oblast">Арциз</option>
+      <option value="Belgorod-Dnestrovskij, Odessa Oblast">Белгород-Днестровский</option>
+      <option value="Bolgrad, Odessa Oblast">Болград</option>
+      <option value="Izmail, Odessa Oblast">Измаил</option>
+      <option value="Kilia, Odessa Oblast">Килия</option>
+      <option value="Odessa, Odessa Oblast">Одесса</option>
+      <option value="Reni, Odessa Oblast">Рени</option>
+      <option value="Sarata, Odessa Oblast">Сарата</option>
+      <option value="Tarutyne, Odessa Oblast">Тарутино</option>
+      <option value="Tatarbunary, Odessa Oblast">Татарбунары</option>
+    </select>
+    <br>
+    <b>Конец:</b>
+    <select id="end">
+      <option value="Arzys, Odessa Oblast">Арциз</option>
+      <option value="Belgorod-Dnestrovskij, Odessa Oblast">Белгород-Днестровский</option>
+      <option value="Bolgrad, Odessa Oblast">Болград</option>
+      <option value="Izmail, Odessa Oblast">Измаил</option>
+      <option value="Kilia, Odessa Oblast">Килия</option>
+      <option value="Odessa, Odessa Oblast">Одесса</option>
+      <option value="Reni, Odessa Oblast">Рени</option>
+      <option value="Sarata, Odessa Oblast">Сарата</option>
+      <option value="Tarutyne, Odessa Oblast">Тарутино</option>
+      <option value="Tatarbunary, Odessa Oblast">Татарбунары</option>
+    </select>
+    <br>
+      <input type="submit" id="submit">
+    </div>
+    <script>
+      function initMap() {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: {lat: 45.952709, lng: 29.421258}
+        });
+        directionsDisplay.setMap(map);
+
+        document.getElementById('submit').addEventListener('click', function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        });
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        var waypts = [];
+        var checkboxArray = document.getElementById('waypoints');
+        for (var i = 0; i < checkboxArray.length; i++) {
+          if (checkboxArray.options[i].selected) {
+            waypts.push({
+              location: checkboxArray[i].value,
+              stopover: true
+            });
+          }
+        }
+
+        directionsService.route({
+          origin: document.getElementById('start').value,
+          destination: document.getElementById('end').value,
+          waypoints: waypts,
+          optimizeWaypoints: true,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+            var route = response.routes[0];
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7Ipt3dceqex2qaE3umfQdw1ZpZU494wk&callback=initMap">
+    </script>
+  </body>
+</html>
