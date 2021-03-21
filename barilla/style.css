@@ -1,0 +1,365 @@
+:root {
+    font-size: 1em;
+}
+
+html {
+    background-image: url('./assets/bg-barilla.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+body {
+    padding: 1em 1.4em;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: unset;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.link:visited, .link:focus, .link:hover, .link:active {
+    color: #1468a0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid white;
+    border-radius: 0.7em;
+}
+
+.container+.container {
+    margin-top: 1em;
+}
+
+.main {
+    width: 83.3333%;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    background-color: #F01A18;
+    border-radius: 0.7em 0.7em 0 0;
+    color: white;
+    padding: 0.4em 0;
+}
+
+.header__caption {
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 1.7rem;
+    margin: 0 0 0.3em;
+    line-height: 2rem;
+}
+
+.main__image {
+    display: block;
+    width: 100%;
+    padding: 2em 0 0.4em;
+    animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes scale-in-bottom {
+    0% {
+        transform: scale(0);
+        transform-origin: 50% 100%;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 50% 100%;
+    }
+}
+
+.main__caption {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #363636;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0.25em 0;
+}
+
+.main-form>*+* {
+    margin-top: 1em;
+}
+
+.row {
+    display: flex;
+}
+
+.row>*+* {
+    margin-left: 1em;
+}
+
+.main-form__column {
+    flex: 1 1 50%;
+    position: relative;
+}
+
+.main-form__radio {
+    display: none;
+}
+
+.main-form__radio-label {
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 0.85em 1em;
+    border: 1px solid #1779ba;
+    color: #1779ba;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 0.5em;
+    line-height: 1;
+    transition: all 0.25s ease-out;
+}
+
+.main-form__radio-label:hover {
+    border-color: #0c3d5d;
+    color: #0c3d5d;
+}
+
+.main-form__radio:checked+.main-form__radio-label {
+    background-color: rgba(23, 121, 186, 0.75);
+    color: #fff;
+}
+
+.main-form__radio_invalid+.main-form__radio-label {
+    border: 2px solid #c71414;
+}
+
+.main-form__input {
+    font-size: 100%;
+    line-height: 1.15;
+    padding: 1em 0.5em 0.5em;
+    width: 100%;
+    border: 1px solid #c7d3d7;
+}
+
+.main-form__input:focus {
+    outline: none;
+}
+
+.has-first-focus:invalid {
+    border-bottom: 2px solid #c71414;
+}
+
+.main-form__input-label {
+    position: absolute;
+    left: 0.5em;
+    top: 1em;
+    z-index: 1;
+    transition: all 0.2s ease;
+}
+
+.main-form__input:focus~.main-form__input-label, .main-form__input:valid+.main-form__input-label, .main-form__input:not(:placeholder-shown)+.main-form__input-label {
+    top: 0;
+    font-size: 0.75em;
+    color: #4e4e4e;
+    left: 0.25rem;
+    padding: 0 0.25rem;
+    line-height: 1.3;
+}
+
+.main-form__birthday-hint {
+    font-size: 0.75rem;
+}
+
+.main-form__invalid-warning {
+    display: none;
+    text-align: left;
+    color: #c71414;
+    font-size: 0.75em;
+    line-height: 1em;
+    padding: 0.25em 0.35em;
+    width: 100%;
+}
+
+.has-first-focus:invalid~.main-form__invalid-warning {
+    display: block;
+}
+
+.has-first-focus:focus~.main-form__invalid-warning {
+    display: none;
+}
+
+.main-form__invalid-warning_visible {
+    display: block;
+}
+
+.main-form__button {
+    width: 100%;
+    background-color: #F01A18;
+    border-style: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #fff;
+    border-radius: 0.4rem;
+    padding: 0.85em 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    transition: all 0.35s ease-in-out;
+}
+
+.main-form__button:hover {
+    background-color: #012A56;
+}
+
+.main-form__button-caption {
+    animation: pulsing 1.2s infinite;
+}
+
+@keyframes pulsing {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.footer {
+    width: 91.6667%;
+    margin: auto;
+    padding: 0.4em 0;
+    text-align: center;
+}
+
+.footer__text {
+    font-size: 0.6rem;
+    margin: 0 0 1em;
+    line-height: 1.6;
+}
+
+.footer__links {
+    font-size: 0.6rem;
+}
+
+.advertise {
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    width: 276px;
+    bottom: 10%;
+    left: 50%;
+    background-color: #fff;
+    border: 2px solid #c00;
+    margin: 0 0 0 -150px;
+    padding: 5px 10px 10px;
+    overflow: hidden;
+    box-shadow: 2px 5px 20px 0 #141414;
+}
+
+.advertise__caption {
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+.advertise__text {
+    font-size: 0.75rem;
+    margin: 10px 0;
+}
+
+.advertise__link {
+    display: inline-block;
+}
+
+.advertise__closer {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #000;
+}
+
+.advertise__closer:before, .advertise__closer:after {
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    content: ' ';
+    height: 15px;
+    width: 2px;
+    background-color: #686868;
+}
+
+.advertise__closer:before {
+    transform: rotate(45deg);
+}
+
+.advertise__closer:after {
+    transform: rotate(-45deg);
+}
+
+.modal-page {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #fff;
+    min-width: 100%;
+}
+
+.modal-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal-page__closer {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    font-size: 1.6em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1em;
+    background: #F01A18;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-page__closer:focus {
+    outline: none;
+}
+
+@media (max-width: 640px) {
+    .main {
+        width: 100%;
+        padding: 0 0.5em;
+    }
+    .main-form__name {
+        display: block;
+    }
+    .main-form__name>*+* {
+        margin: 1em 0 0;
+    }
+    .row+.row {
+        margin-top: 1em;
+    }
+    .footer {
+        width: 100%;
+        padding: 0.5em 0;
+    }
+}
