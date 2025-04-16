@@ -18,8 +18,6 @@ function animation(elems) {
   elems.forEach((el) => {
     const elementHeight = el.getBoundingClientRect().top;
 
-    console.log(window.innerHeight / 1.5, elementHeight);
-
     if (window.innerHeight / 1.5 > elementHeight) {
       el.style.transform = "translateX(0) translateY(0)";
       el.style.opacity = "100";
