@@ -24,257 +24,261 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <a href="#">
-        <img src="./assets/samsung.svg" alt="Samsung logo" class="logo-image" />
-      </a>
-      <nav class="nav">
-        <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
-          <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100">
-            <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
-            <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
-            <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
-          </svg>
-        </button>
-        <ul class="nav-list">
-          <li>
-            <a href="#enroll">Enroll</a>
-          </li>
-          <li>
-            <a href="#qualify">How To Qualify</a>
-          </li>
-          <li>
-            <a href="#earn-points">How To Earn Points</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero flex">
-        <div class="hero-text animation animation-right">
-          <h1 class="hero-title title title-xxl">Welcome to Samsung Loyalty</h1>
-          <p class="hero-subtitle">
-            Samsung Loyalty is a reward program that allows you to enjoy discounts and earn points
-            when you purchase specific Samsung phones.
-          </p>
-          <a href="#enroll">
-            <button class="button button_white button__arrow arrow_down white-arrow_down">
-              Enroll Now
-            </button>
-          </a>
-        </div>
-        <img src="assets/hero.png" alt="hero image" class="hero-image" />
-        <img src="assets/hero-desktop.png" alt="hero image" class="hero-image_desktop" />
-      </section>
-
-      <section class="qualify flex section-xl" id="qualify">
-        <div class="animation animation-right">
-          <h2 class="title title-xxl">How to qualify</h2>
-          <p>
-            You automatically join the program & get a one-off 6% discount when you purchase any of
-            our Flagship & Tab S8 Series.
-          </p>
-          <a href="#products">
-            <button class="button button__arrow arrow_down">Explore Phones</button>
-          </a>
-        </div>
-        <img
-          src="assets/qualify.png"
-          alt="qualify image"
-          class="qualify-image animation animation-left"
-        />
-      </section>
-
-      <section class="products section-xxl" id="products">
-        <h2 class="products-title title animation animation-up">
-          Buy any of this product and join program
-        </h2>
-        <div class="products-grid animation">
-          <article class="products-card">
-            <div class="products-card__image" style="background-color: #fef2f2">
-              <img src="assets/product-1.png" alt="Galaxy Z Flip" />
-            </div>
-            <h4 class="product-card__name">Galaxy Z Flip</h4>
-          </article>
-          <article class="products-card">
-            <div class="products-card__image" style="background-color: #fffaf2">
-              <img src="assets/product-2.png" alt="Galaxy Z Fold" />
-            </div>
-            <h4 class="product-card__name">Galaxy Z Fold</h4>
-          </article>
-          <article class="products-card">
-            <div class="products-card__image" style="background-color: #f2f2ff">
-              <img src="assets/product-3.png" alt="Galaxy S22 Ultra" />
-            </div>
-            <h4 class="product-card__name">Galaxy S22 Ultra</h4>
-          </article>
-          <article class="products-card">
-            <div class="products-card__image" style="background-color: #f2fdf2">
-              <img src="assets/product-4.png" alt="Galaxy S22+" />
-            </div>
-            <h4 class="product-card__name">Galaxy S22+</h4>
-          </article>
-          <article class="products-card">
-            <div class="products-card__image" style="background-color: #fcf3fc">
-              <img src="assets/product-5.png" alt="Galaxy S22" />
-            </div>
-            <h4 class="product-card__name">Galaxy S22</h4>
-          </article>
-          <article class="products-card">
-            <div class="products-card__image" style="background-color: #f1f5f9">
-              <img src="assets/product-6.png" alt="Galaxy Tab S8" />
-            </div>
-            <h4 class="product-card__name">Galaxy Tab S8</h4>
-          </article>
-          <article class="products-card">
-            <div class="products-card__image" style="background-color: #f2f2ff">
-              <img src="assets/product-7.png" alt="Galaxy Tab S8+" />
-            </div>
-            <h4 class="product-card__name">Galaxy Tab S8+</h4>
-          </article>
-          <article class="products-card">
-            <div class="products-card__image" style="background-color: #fffaf2">
-              <img src="assets/product-8.png" alt="Galaxy Tab S8 Ultra" />
-            </div>
-            <h4 class="product-card__name">Galaxy Tab S8 Ultra</h4>
-          </article>
-        </div>
-        <a href="#enroll"><button class="button button__arrow arrow_right">Enroll Now</button></a>
-      </section>
-
-      <section class="section-xl" id="earn-points">
-        <div class="earn-points__text animation animation-up">
-          <h2 class="title title-xxl">Earn Point & Redeem items</h2>
-          <p>
-            For subsequent purchases on any of the listed products, you earn points and this point
-            qualifies you to redeem amazing item(s) from Samsung.
-          </p>
-          <a href="#enroll"><button class="button button__arrow arrow_down">Enroll Now</button></a>
-        </div>
-        <img
-          src="assets/earn-points.png"
-          alt="Earn Point & Redeem items"
-          class="earn-points__image animation animation-up"
-        />
-      </section>
-
-      <section class="enroll-wrap" id="enroll">
-        <div class="enroll flex section-xl">
-          <div class="enroll__text animation animation-right">
-            <h2 class="enroll__title title">Enroll here and enjoy amazing benefits</h2>
-            <p>Kindly enter your data and get enrolled</p>
-          </div>
-          <form class="enroll-form animation animation-left" id="enroll-form">
-            <input
-              type="text"
-              name="firstName"
-              class="enroll-form__field"
-              placeholder="First Name"
-              required
-            />
-            <input
-              type="text"
-              name="lastName"
-              class="enroll-form__field"
-              placeholder="Last Name"
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              class="enroll-form__field"
-              placeholder="Phone Number"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              class="enroll-form__field"
-              placeholder="Email address"
-            />
-            <input
-              type="number"
-              name="cardNumber"
-              class="enroll-form__field"
-              placeholder="Card Number"
-            />
-            <div class="enroll-form__select">
-              <select name="gender" id="gender" class="enroll-form__field">
-                <option value="gender" selected>Gender</option>
-                <option value="man">Man</option>
-                <option value="woman">Woman</option>
-              </select>
-            </div>
-            <input
-              type="text"
-              name="address"
-              class="enroll-form__field"
-              placeholder="Current Address"
-            />
-            <div class="enroll-form__select">
-              <select name="state" id="state" class="enroll-form__field">
-                <option value="State" selected>State</option>
-                <option value="California">California</option>
-                <option value="Texas">Texas</option>
-                <option value="New York">New York</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Pensivania">Pensivania</option>
-                <option value="Illinois">Illinois</option>
-              </select>
-            </div>
-            <button
-              type="submit"
-              class="button button_white button__arrow white-arrow_right enroll-form__submit"
-              form="enroll-form"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer section-xxl">
-      <nav class="flex">
+    <div class="wrapper">
+      <header class="header">
         <a href="#">
           <img src="./assets/samsung.svg" alt="Samsung logo" class="logo-image" />
         </a>
-        <ul class="footer-nav-list">
-          <li>
-            <a href="#enroll">Enroll</a>
-          </li>
-          <li>
-            <a href="#qualify">How To Qualify</a>
-          </li>
-          <li>
-            <a href="#earn-points">How To Earn Points</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="nav">
+          <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
+            <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100">
+              <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
+              <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
+              <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
+            </svg>
+          </button>
+          <ul class="nav-list">
+            <li>
+              <a href="#enroll">Enroll</a>
+            </li>
+            <li>
+              <a href="#qualify">How To Qualify</a>
+            </li>
+            <li>
+              <a href="#earn-points">How To Earn Points</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-      <hr />
+      <main>
+        <section class="hero flex">
+          <div class="hero-text animation animation-right">
+            <h1 class="hero-title title title-xxl">Welcome to Samsung Loyalty</h1>
+            <p class="hero-subtitle">
+              Samsung Loyalty is a reward program that allows you to enjoy discounts and earn points
+              when you purchase specific Samsung phones.
+            </p>
+            <a href="#enroll">
+              <button class="button button_white button__arrow arrow_down white-arrow_down">
+                Enroll Now
+              </button>
+            </a>
+          </div>
+          <img src="assets/hero.png" alt="hero image" class="hero-image" />
+          <img src="assets/hero-desktop.png" alt="hero image" class="hero-image_desktop" />
+        </section>
 
-      <div class="flex">
-        <span>Copyright© 1995-2022 Samsung. All rights reserved.</span>
-        <div class="socials">
+        <section class="qualify flex section-xl" id="qualify">
+          <div class="animation animation-right">
+            <h2 class="title title-xxl">How to qualify</h2>
+            <p>
+              You automatically join the program & get a one-off 6% discount when you purchase any
+              of our Flagship & Tab S8 Series.
+            </p>
+            <a href="#products">
+              <button class="button button__arrow arrow_down">Explore Phones</button>
+            </a>
+          </div>
+          <img
+            src="assets/qualify.png"
+            alt="qualify image"
+            class="qualify-image animation animation-left"
+          />
+        </section>
+
+        <section class="products section-xxl" id="products">
+          <h2 class="products-title title animation animation-up">
+            Buy any of this product and join program
+          </h2>
+          <div class="products-grid animation">
+            <article class="products-card">
+              <div class="products-card__image" style="background-color: #fef2f2">
+                <img src="assets/product-1.png" alt="Galaxy Z Flip" />
+              </div>
+              <h4 class="product-card__name">Galaxy Z Flip</h4>
+            </article>
+            <article class="products-card">
+              <div class="products-card__image" style="background-color: #fffaf2">
+                <img src="assets/product-2.png" alt="Galaxy Z Fold" />
+              </div>
+              <h4 class="product-card__name">Galaxy Z Fold</h4>
+            </article>
+            <article class="products-card">
+              <div class="products-card__image" style="background-color: #f2f2ff">
+                <img src="assets/product-3.png" alt="Galaxy S22 Ultra" />
+              </div>
+              <h4 class="product-card__name">Galaxy S22 Ultra</h4>
+            </article>
+            <article class="products-card">
+              <div class="products-card__image" style="background-color: #f2fdf2">
+                <img src="assets/product-4.png" alt="Galaxy S22+" />
+              </div>
+              <h4 class="product-card__name">Galaxy S22+</h4>
+            </article>
+            <article class="products-card">
+              <div class="products-card__image" style="background-color: #fcf3fc">
+                <img src="assets/product-5.png" alt="Galaxy S22" />
+              </div>
+              <h4 class="product-card__name">Galaxy S22</h4>
+            </article>
+            <article class="products-card">
+              <div class="products-card__image" style="background-color: #f1f5f9">
+                <img src="assets/product-6.png" alt="Galaxy Tab S8" />
+              </div>
+              <h4 class="product-card__name">Galaxy Tab S8</h4>
+            </article>
+            <article class="products-card">
+              <div class="products-card__image" style="background-color: #f2f2ff">
+                <img src="assets/product-7.png" alt="Galaxy Tab S8+" />
+              </div>
+              <h4 class="product-card__name">Galaxy Tab S8+</h4>
+            </article>
+            <article class="products-card">
+              <div class="products-card__image" style="background-color: #fffaf2">
+                <img src="assets/product-8.png" alt="Galaxy Tab S8 Ultra" />
+              </div>
+              <h4 class="product-card__name">Galaxy Tab S8 Ultra</h4>
+            </article>
+          </div>
+          <a href="#enroll"><button class="button button__arrow arrow_right">Enroll Now</button></a>
+        </section>
+
+        <section class="section-xl" id="earn-points">
+          <div class="earn-points__text animation animation-up">
+            <h2 class="title title-xxl">Earn Point & Redeem items</h2>
+            <p>
+              For subsequent purchases on any of the listed products, you earn points and this point
+              qualifies you to redeem amazing item(s) from Samsung.
+            </p>
+            <a href="#enroll"
+              ><button class="button button__arrow arrow_down">Enroll Now</button></a
+            >
+          </div>
+          <img
+            src="assets/earn-points.png"
+            alt="Earn Point & Redeem items"
+            class="earn-points__image animation animation-up"
+          />
+        </section>
+
+        <section class="enroll-wrap" id="enroll">
+          <div class="enroll flex section-xl">
+            <div class="enroll__text animation animation-right">
+              <h2 class="enroll__title title">Enroll here and enjoy amazing benefits</h2>
+              <p>Kindly enter your data and get enrolled</p>
+            </div>
+            <form class="enroll-form animation animation-left" id="enroll-form">
+              <input
+                type="text"
+                name="firstName"
+                class="enroll-form__field"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                class="enroll-form__field"
+                placeholder="Last Name"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                class="enroll-form__field"
+                placeholder="Phone Number"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                class="enroll-form__field"
+                placeholder="Email address"
+              />
+              <input
+                type="number"
+                name="cardNumber"
+                class="enroll-form__field"
+                placeholder="Card Number"
+              />
+              <div class="enroll-form__select">
+                <select name="gender" id="gender" class="enroll-form__field">
+                  <option value="gender" selected>Gender</option>
+                  <option value="man">Man</option>
+                  <option value="woman">Woman</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                name="address"
+                class="enroll-form__field"
+                placeholder="Current Address"
+              />
+              <div class="enroll-form__select">
+                <select name="state" id="state" class="enroll-form__field">
+                  <option value="State" selected>State</option>
+                  <option value="California">California</option>
+                  <option value="Texas">Texas</option>
+                  <option value="New York">New York</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Pensivania">Pensivania</option>
+                  <option value="Illinois">Illinois</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                class="button button_white button__arrow white-arrow_right enroll-form__submit"
+                form="enroll-form"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer section-xxl">
+        <nav class="flex">
           <a href="#">
-            <img src="assets/icon-1.svg" alt="Facebook" />
+            <img src="./assets/samsung.svg" alt="Samsung logo" class="logo-image" />
           </a>
-          <a href="#">
-            <img src="assets/icon-2.svg" alt="Instagram" />
-          </a>
-          <a href="#">
-            <img src="assets/icon-3.svg" alt="LinkedIn" />
-          </a>
-          <a href="#">
-            <img src="assets/icon-4.svg" alt="Twitter" />
-          </a>
-          <a href="#">
-            <img src="assets/icon-5.svg" alt="Youtube" />
-          </a>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="#enroll">Enroll</a>
+            </li>
+            <li>
+              <a href="#qualify">How To Qualify</a>
+            </li>
+            <li>
+              <a href="#earn-points">How To Earn Points</a>
+            </li>
+          </ul>
+        </nav>
+
+        <hr />
+
+        <div class="flex">
+          <span>Copyright© 1995-2022 Samsung. All rights reserved.</span>
+          <div class="socials">
+            <a href="#">
+              <img src="assets/icon-1.svg" alt="Facebook" />
+            </a>
+            <a href="#">
+              <img src="assets/icon-2.svg" alt="Instagram" />
+            </a>
+            <a href="#">
+              <img src="assets/icon-3.svg" alt="LinkedIn" />
+            </a>
+            <a href="#">
+              <img src="assets/icon-4.svg" alt="Twitter" />
+            </a>
+            <a href="#">
+              <img src="assets/icon-5.svg" alt="Youtube" />
+            </a>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

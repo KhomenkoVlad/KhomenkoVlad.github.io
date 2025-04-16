@@ -27,9 +27,7 @@ function animation(elems) {
 
 const elements = document.querySelectorAll(".animation");
 
-window.addEventListener("load", (event) => {
-  animation(elements);
-});
+animation(elements);
 
 document.addEventListener("scroll", (event) => {
   animation(elements);

@@ -46,7 +46,7 @@ textarea {
 
 :root {
   --radius: 1rem;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -55,7 +55,6 @@ body {
   margin: 0;
   text-align: center;
   overflow-x: hidden;
-  height: 100vh;
 }
 
 a {
@@ -80,6 +79,11 @@ section {
 }
 
 /* custom classes */
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
 
 .section-xl {
   max-width: 1075px;
